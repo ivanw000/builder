@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ivanw-builder-almalinux:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ivanw/builder-almalinux:8
+    container_name: ivanw-builder-almalinux
+    user: "$DOCKER_MYUID:$DOCKER_MYGID"
+    volumes:
+      - ./workspace:/mnt/workspace
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+
