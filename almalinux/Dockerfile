@@ -18,8 +18,8 @@ RUN dnf install -y \
     epel-release \
     gh \
     git \
-    python3 \
     jq \
+    python3.11 \
     libX11-devel \
     libxkbfile-devel \
     krb5-devel \
