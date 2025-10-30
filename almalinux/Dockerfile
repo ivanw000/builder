@@ -27,6 +27,8 @@ RUN dnf install -y \
     gtk3 \
     gtk3-devel \
     alsa-lib \
+    gperf \
+    readline-devel \
     rpm-build \
     curl \
     && dnf clean all
