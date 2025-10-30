@@ -77,9 +77,9 @@ RUN echo '' >> /home/builder/.bashrc \
     && echo '[ -f "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"' >> /home/builder/.bashrc
 
 # 5. Install node via nvm
-RUN bash -c "source $NVM_DIR/nvm.sh && nvm install 22.14.0"
+RUN bash -c "source $NVM_DIR/nvm.sh && nvm install 22.18.0"
 RUN bash -c "source $NVM_DIR/nvm.sh && nvm install 20.19.0"
-RUN bash -c "source $NVM_DIR/nvm.sh && nvm alias default 22.14.0"
+RUN bash -c "source $NVM_DIR/nvm.sh && nvm alias default 22.18.0"
 
 # Default command
 CMD ["/bin/bash"]
