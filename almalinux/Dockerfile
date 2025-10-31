@@ -54,6 +54,9 @@ RUN chown -R builder:builder /mnt/workspace
 # Switch to the non-root user
 USER builder
 
+# Update bashrc
+RUN echo "alias ls='ls --color=auto -F'" >> .bashrc
+
 # 2. Install nvm (Node Version Manager)
 # This installs nvm into /home/builder/.nvm
 # The install script automatically adds the necessary sourcing lines to /home/builder/.bashrc
